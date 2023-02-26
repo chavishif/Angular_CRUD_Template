@@ -1,0 +1,20 @@
+<p>animal works!</p>
+<button (click)="animal()">animal</button>
+{{animals | json}}
+<!-- <li *ngFor = "let animal of animals " > -->
+
+    <!-- >
+  name:  {{animal.sname}}
+  age:  {{animal.age}} -->
+
+    <!-- </li> -->
+    <ul>
+
+    <li *ngFor="let element of animals; let i = index;let even = even; let odd = odd" 
+    [ngClass]="{ even: even, odd: odd }"
+    [style.font-weight]="odd ? 'bold' : 'normal'">
+  {{element.aname}}, {{element.age}}
+  <button (click)="deleteAnimal(i)">Delete</button>
+
+</li>
+</ul>

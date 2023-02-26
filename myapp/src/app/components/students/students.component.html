@@ -1,0 +1,11 @@
+<p>students works!</p>
+<li *ngFor="let student of ar">
+    {{student.sname}}
+    {{student.age}}
+    <button (click)="getsingle(student.id)" >getstudent</button>
+</li>
+
+
+{{ar | json}}
+<br>
+{{student | json}}

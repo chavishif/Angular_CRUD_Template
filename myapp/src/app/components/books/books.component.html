@@ -1,0 +1,16 @@
+<p>Add book:</p><br>
+title<input #title/><br>
+author<input #author/>
+<button (click)="addBook(title.value, author.value)" >Add</button>
+
+
+<br>
+<li *ngFor="let book of books">
+    {{book.id}}
+    {{book.title}}
+    {{book.author}}
+    <button (click)="delBook(book.id)" >delete book</button>
+    <button (click)="updBook(book.id, title.value, author.value)" >Update</button>
+
+</li>
+
